@@ -1,0 +1,122 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    text-align: center;
+}
+
+/* Menu Container */
+.menu-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* Flexbox Wrapper for Menus */
+.menu-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Individual Menu Section */
+.menu-section {
+    flex: 1;
+    background: #2a2a2a;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+/* Menu Section Title */
+.menu-section h1 {
+    font-size: 28px;
+    color: #ee0505; /* Red color */
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 1px solid #f6f6f6;
+    padding-bottom: 10px;
+}
+
+/* Menu Item */
+.menu-item {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Menu Item Title */
+.menu-item h2 {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+    color: #fa1616;
+}
+
+/* Menu Item Description */
+.menu-item p {
+    font-size: 14px;
+    color: #fdf7f7;
+    margin: 5px 0;
+}
+
+/* Price */
+.menu-item .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #e9e9e9;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/* Black Box Section */
+.student-discount-box {
+    background-color: #2a2a2a;
+    color: #e1e1e1;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.student-discount-box h2 {
+    font-size: 24px;
+    color: #ee0505; /* Red for heading */
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.student-discount-box p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu-section {
+        text-align: center;
+    }
+}
+/* Subheader Style */
+.menu-subheader {
+    font-size: 22px;
+    color: #e2d6d6; /* Red color */
+    text-transform: uppercase;
+    margin: 30px 0 10px;
+    border-bottom: 1px solid #f6f6f6;
+    padding-bottom: 5px;
+    text-align: left;
+}
+
