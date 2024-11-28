@@ -1,0 +1,92 @@
+/* h1 and h2 are styled almost the same, but h2's position is absolute making it positioned relative to the hover div element, while h1 is positioned naturally */
+h1 {
+    text-align: center;
+    color: #F04419;
+    background-color: #6B0F1A;
+    border: 5px solid black;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    color: #F04419;
+    margin: 20px;
+    background-color: #6B0F1A;
+    position: absolute;
+    border: 5px solid black;}
+    
+/* The parent div which is shown when the div is not hovered over, centered in the page with a background image of some steaks to give it some flair. 
+Height is set to auto to scale with webpage zoom and format */
+div.hover_parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:20px;
+    position: relative;
+    height:auto;
+    background-image: url(AU_steak_bg.png);
+    border: 5px solid;}
+
+/* Styles the image to be of a certain size. Height is set to auto to scale with webpage zoom and format */
+.img_sizing {
+    vertical-align:bottom;
+    object-fit:cover;
+    height:auto;
+    margin:10px;
+    border: 5px solid;
+}
+
+/* Styles the hidden div revealed in the parent element, appears within the div through absolute postition and the top, bottom, left, right properties equal to 0 
+(which makes the parent div the maximum bounds). Appears in the center with flex, with a black background, and it's natural opacity is 0 until hovered. Transitions from different opacitysin 0.2 seconds. 
+Scales with the parent div, so no need for auto height*/
+.hover_hidden{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #0C1821;
+    color: #F04419;
+    font-size: auto;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:20px;
+    transition: opacity .2s;
+}
+
+/* When the parent div is hovered over, the hidden divs opacity is changed from 0 to 0.9, revealing it*/
+.hover_parent:hover .hover_hidden {
+    opacity: 0.9;
+  }
+
+/* Different colors for each div section of the page */
+#Begin {
+    background-color:#F04419;
+}
+
+#Growth {
+    background-color:#978CA6;
+}
+
+#Decline {
+    background-color:#6B0F1A;
+}
+
+#Today{
+    background-color:#1B2A41;
+}
+
+body {
+    font-size: 18px;
+    margin: 20px;
+    background-color:#0C1821
+}
+
+/* Used Colors
+Orange: #F04419
+Black: #0C1821
+Dark Red: #6B0F1A
+Light Blue: #978CA6
+Dark Blue #1B2A41*/
