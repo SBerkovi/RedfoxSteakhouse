@@ -1,11 +1,12 @@
 body {
-    background-color: #2a2a2a;
+    background-color: #d4d2d2;
     color: rgb(211, 82, 82);
     text-align: center;
 }
 
 h1 {
     color: red;
+    margin-top: 100px;
 }
 
 input, button, textarea {
