@@ -1,0 +1,28 @@
+/*
+Awais Razaque - Final Project
+Marist CMPT 221L Fall 2024
+*/
+
+/* Space Around Google Form Container */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0c1821;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Google Form Container */
+.googleform {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
