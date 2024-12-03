@@ -4,6 +4,7 @@ h1 {
     color: #F04419;
     background-color: #6B0F1A;
     border: 5px solid black;
+    margin-top:100px;
 }
 
 h2 {
@@ -24,7 +25,7 @@ div.hover_parent {
     margin:20px;
     position: relative;
     height:auto;
-    background-image: url(images/AU_steak_bg.png);
+    background-image: url(AU_steak_bg.png);
     border: 5px solid;}
 
 /* Styles the image to be of a certain size. Height is set to auto to scale with webpage zoom and format */
@@ -36,30 +37,46 @@ div.hover_parent {
     border: 5px solid;
 }
 
-/* Styles the hidden div revealed in the parent element, appears within the div through absolute postition and the top, bottom, left, right properties equal to 0 
-(which makes the parent div the maximum bounds). Appears in the center with flex, with a black background, and it's natural opacity is 0 until hovered. Transitions from different opacitysin 0.2 seconds. 
-Scales with the parent div, so no need for auto height*/
+@media (hover:hover) {
+    /* When a device allows hover (PC browsers). Styles the hidden div revealed in the parent element, appears within the div through absolute postition and the top, bottom, left, right properties equal to 0 
+    (which makes the parent div the maximum bounds). Has a natural opacity as 0 until hovered, transitions to 0.9 opacity in 0.2 seconds. 
+    Scales with the parent div, so no need for auto height*/
+    .hover_hidden{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        transition: opacity .2s;
+    }
+
+    /* When the parent div is hovered over, the hidden divs opacity is changed from 0 to 0.9, revealing it*/
+    .hover_parent:hover .hover_hidden {
+        opacity: 0.9;
+    }
+}
+
+@media (hover:none) {
+    /* When a device does not allow hover (mobile). Hidden div is no longer hidden, always at 0.9 opacity, now appears to the side of the image on rightside of div. H2 appears on the left side of the div */
+    h2 {
+        left: 20px;
+    }
+    .hover_hidden {
+        opacity: 0.9;
+      }
+}
+
+/* Universal for all devices. Makes text appear in the center with flex and with a black background. Scales with the parent div, so no need for auto height*/
 .hover_hidden{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
     background: #0C1821;
     color: #F04419;
     font-size: auto;
-    opacity: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     padding:20px;
-    transition: opacity .2s;
 }
-
-/* When the parent div is hovered over, the hidden divs opacity is changed from 0 to 0.9, revealing it*/
-.hover_parent:hover .hover_hidden {
-    opacity: 0.9;
-  }
 
 /* Different colors for each div section of the page */
 #Begin {
@@ -80,9 +97,59 @@ Scales with the parent div, so no need for auto height*/
 
 body {
     font-size: 18px;
-    margin: 20px;
-    background-color:#0C1821
+    background-color:#0C1821;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
+
+/* Header Styling */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #2c2c2c;
+    color: white;
+    z-index: 1000;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .nav-links li a:hover {
+    color: #f39c12;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .logo-img {
+    width: 50px;
+    height: auto;
+    object-fit: contain; 
+  }
 
 /* Used Colors
 Orange: #F04419
