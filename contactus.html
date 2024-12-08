@@ -2,7 +2,6 @@
 <html lang="en-US">
     <head>
         <link type="text/css" rel="stylesheet" media="all" href="styleContactUs.css" />
-        <script src="script.js"defer></script>
         <title>Contact Us</title>
     </head>
 
@@ -26,19 +25,19 @@
         </header>
 
         <h1>Help Us Reach You</h1>
-        <form>
+        <form onsubmit="handleFormSubmit(event)">
             <div>
                 <p>Your Name:</p>
-                <input type="text" required></input>
+                <input type="text" id="nameInput" required></input>
 
                 <p>Email Address:</p>
-                <input type="email" required></input>
+                <input type="email" id="emailInput" required></input>
 
                 <p>Phone Number:</p>
-                <input type="tel" required></input>
+                <input type="tel" id="phoneInput" required></input>
 
                 <p>Comment:</p>
-                <textarea rows="4" cols="50" required></textarea>
+                <textarea rows="4" cols="50" id="commentInput" required></textarea>
 
                 <br></br>
                 <button type="submit">Submit</button>
@@ -48,5 +47,23 @@
         <div>
             <p id="reach">Any questions or concerns, please reach out to our team at 1-800-555-5555 or email rfsteakhouse@gmail.com</p>
         </div>
+
+        <div id="result" style="margin-top: 20px; font-size: 18px;"></div>
+
+        <script>
+            function handleFormSubmit(event) {
+                event.preventDefault();
+
+                let name = document.getElementById("nameInput").value;
+                let email = document.getElementById("emailInput").value;
+                let phone = document.getElementById("phoneInput").value;
+                let comment = document.getElementById("commentInput").value;
+
+                event.target.reset();
+                alert("Your form has been submitted successfully!");
+
+                console.log("Form Data Submitted:", { name, email, phone, comment});         
+            }
+        </script>
     </body>
 </html>
