@@ -26,18 +26,29 @@
 
         <h1>Help Us Reach You</h1>
         <form onsubmit="handleFormSubmit(event)">
-            <div>
-                <p>Your Name:</p>
+            <div class="form">
+                <label>Your Name:
+                <br></br>
                 <input type="text" id="nameInput" required></input>
+                </label>
 
-                <p>Email Address:</p>
+                <br></br>
+                <label>Email Address:
+                <br></br>
                 <input type="email" id="emailInput" required></input>
+                </label>
 
-                <p>Phone Number:</p>
+                <br></br>
+                <label>Phone Number:
+                <br></br>
                 <input type="tel" id="phoneInput" required></input>
+                </label>
 
-                <p>Comment:</p>
+                <br></br>
+                <label>Comment:
+                <br></br>
                 <textarea rows="4" cols="50" id="commentInput" required></textarea>
+                </label>
 
                 <br></br>
                 <button type="submit">Submit</button>
@@ -51,6 +62,7 @@
         <div id="result" style="margin-top: 20px; font-size: 18px;"></div>
 
         <script>
+            let arrForm = new Array();
             function handleFormSubmit(event) {
                 event.preventDefault();
 
@@ -59,10 +71,14 @@
                 let phone = document.getElementById("phoneInput").value;
                 let comment = document.getElementById("commentInput").value;
 
+                let Form = {name: name, email: email, phone: phone, comment: comment};
+
+                arrForm.push(Form);
+                
                 event.target.reset();
                 alert("Your form has been submitted successfully!");
 
-                console.log("Form Data Submitted:", {name, email, phone, comment});
+                console.log(arrForm);
             }
         </script>
     </body>

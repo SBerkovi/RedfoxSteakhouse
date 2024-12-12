@@ -1,83 +1,98 @@
 body {
-    background-color: #d4d2d2;
-    color: rgb(211, 82, 82);
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+  background-color: #0C1821;
+  color:cornsilk;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
-    color: red;
-    margin-top: 100px;
+  color: red;
+  margin-top: 100px;
 }
 
 input, button, textarea {
-    color: brown;
-    background-color: antiquewhite;
-    box-sizing: border-box;
-    border: 2px solid red;
-    width: 400px;
-    height: 30px;
+  background-color: antiquewhite;
+  color: #6B0F1A;
+  box-sizing: border-box;
+  border: 2px solid red;
+  width: 400px;
+  height: 30px;
 }
 
 textarea {
-    height: 70px;
+  height: 70px;
+  resize: none;
 }
 
 button[type=submit] {
-    width: 90px;
-    height: 50px;
-    font-size: 20px;
+  width: 90px;
+  height: 50px;
+  font-size: 20px;
 }
 
 #reach {
-    margin-top: 100px;
+  margin-top: 100px;
 }
 
 /* Header Styling */
 header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: #2c2c2c;
-  color: white;
-  z-index: 1000;
+position: fixed;
+top: 0;
+width: 100%;
+background: #2c2c2c;
+color: white;
+z-index: 1000;
 }
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1rem 2rem;
 }
 
 .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
+list-style: none;
+display: flex;
+gap: 1.5rem;
 }
 
 .nav-links li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
+color: white;
+text-decoration: none;
+font-weight: bold;
 }
 
 .nav-links li a:hover {
-  color: #f39c12;
+color: #f39c12;
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+font-size: 1.5rem;
+font-weight: bold;
+display: flex;
+align-items: center;
+gap: 0.5rem;
 }
 
 .logo-img {
-  width: 50px;
-  height: auto;
-  object-fit: contain; 
+width: 50px;
+height: auto;
+object-fit: contain; 
 }
+
+.form{
+background-color:#6B0F1A;
+padding: 10px;
+margin-left: 20px;
+margin-right: 20px;
+}
+
+/* Used Colors
+Orange: #F04419
+Black: #0C1821
+Dark Red: #6B0F1A
+Light Blue: #978CA6
+Dark Blue #1B2A41*/
